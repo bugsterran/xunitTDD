@@ -31,8 +31,4 @@ public class TestCase implements Test{
     public void tearDown() {
     };
 
-    public void forceStop(){
-
-    }
-
 }
