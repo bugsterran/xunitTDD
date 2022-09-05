@@ -9,7 +9,7 @@ public class TestSuite {
 
     public TestSuite(Class<? extends Test> testClass) {
 
-        Arrays.stream(testClass.getMethods())
+        /*Arrays.stream(testClass.getMethods())
                 .filter(m -> m.getAnnotation(xunit.annotation.Test.class) != null)
                 .forEach(m -> {
                     try {
@@ -17,9 +17,9 @@ public class TestSuite {
                     } catch (Exception e){
                         throw new RuntimeException(e);
                     }
-                });
+                });*/
        //  토비님의 방식
-       /*Arrays.stream(testClass.getMethods())
+       Arrays.stream(testClass.getMethods())
                 .filter(method -> method.getName().startsWith("test"))
                 .forEach(method -> {
                         try {
@@ -27,7 +27,7 @@ public class TestSuite {
                         } catch (Exception e){
                             throw new RuntimeException(e);
                         }
-                });*/
+                });
     }
 
     public TestSuite() {
