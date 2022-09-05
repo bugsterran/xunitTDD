@@ -26,9 +26,11 @@ public class TestCase implements Test{
     }
 
     public void setUp() {
+        System.out.println("setUp");
     };
 
     public void tearDown() {
+        System.out.println("tearDown");
     };
 
     public void forceStop(){
