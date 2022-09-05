@@ -42,5 +42,6 @@ public class TestSuite {
         tests.forEach( t -> {
             t.run(result);
         });
+        System.out.println("Fished run");
     }
 }
