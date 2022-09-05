@@ -25,8 +25,12 @@ public class TestCase implements Test{
         tearDown();
     }
 
-    public void setUp() {};
+    public void setUp() {
+        System.out.println("setUp");
+    };
 
-    public void tearDown() {};
+    public void tearDown() {
+        System.out.println("tearDown");
+    };
 
 }
