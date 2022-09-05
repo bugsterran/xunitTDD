@@ -5,5 +5,6 @@ public class Assert {
         if(!expected.equals(actual)){
             throw new AssertionError("expected <" + expected + "> but was <" + actual + ">");
         }
+        System.out.println("true");
     }
 }
