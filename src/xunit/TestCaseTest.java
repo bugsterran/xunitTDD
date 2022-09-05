@@ -17,28 +17,28 @@ public class TestCaseTest extends TestCase{
         WasRun wasRun = new WasRun("testMethod");
         TestResult result = new TestResult();
         wasRun.run(result);
-        Assret.assertEquals("setUp testMethod tearDown", wasRun.log);
+        Assert.assertEquals("setUp testMethod tearDown", wasRun.log);
     }
     @Test
     public void testResult(){
         WasRun wasRun = new WasRun("testMethod");
         TestResult result = new TestResult();
         wasRun.run(result);
-        Assret.assertEquals("1 run, 0 failed", result.getSummary());
+        Assert.assertEquals("1 run, 0 failed", result.getSummary());
     }
     @Test
     public void testFailedResultFormatting(){
         TestResult result = new TestResult();
         result.testStart();
         result.testFailed();
-        Assret.assertEquals("1 run, 1 failed", result.getSummary());
+        Assert.assertEquals("1 run, 1 failed", result.getSummary());
     }
     @Test
     public void testFailedResult(){
         WasRun wasRun = new WasRun("testBrokenMethod");
         TestResult result = new TestResult();
         wasRun.run(result);
-        Assret.assertEquals("1 run, 1 failed", result.getSummary());
+        Assert.assertEquals("1 run, 1 failed", result.getSummary());
     }
     @Test
     public void testSuite() {
@@ -47,7 +47,7 @@ public class TestCaseTest extends TestCase{
         suite.add(new WasRun("testMethod"));
         suite.add(new WasRun("testBrokenMethod"));
         suite.run(result);
-        Assret.assertEquals("2 run, 1 failed", result.getSummary());
+        Assert.assertEquals("2 run, 1 failed", result.getSummary());
     }
 
     /*public void testSetUp(){
